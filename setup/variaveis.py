@@ -1,7 +1,7 @@
 #Personagem
 
 nick_perso = ''
-inventario = {'Pocao': 0, 'Dinheiro': 0, 'Armas': {}}
+inventario = {'Pocao': 0, 'Dinheiro': 35, 'Armas': {}, 'Arma equipada': None}
 vida_max = 100
 vida_perso = vida_max
 atk_perso = 1
@@ -9,6 +9,7 @@ nivel = 1
 exp_perso = 0
 exp_nece = 25
 vitalidade = 1
+defesa = 0
 
 
 
@@ -16,12 +17,12 @@ vitalidade = 1
     # Luz > Sombra, Sombra > Vento, Vento > Luz
 
 multi = {
-    {'Luz', 'Sombra'}: 2,
-    {'Sombra', 'Luz'}: 0.5,
-    {'Sombra', 'Vento'}: 2,
-    {'Vento', 'Sombra'}: 0.5,
-    {'Vento', 'Luz'}: 2,
-    {'Luz', 'Vento'}: 0.5
+    ('Luz', 'Sombra'): 2,
+    ('Sombra', 'Luz'): 0.5,
+    ('Sombra', 'Vento'): 2,
+    ('Vento', 'Sombra'): 0.5,
+    ('Vento', 'Luz'): 2,
+    ('Luz', 'Vento'): 0.5
 }
 
 
@@ -40,5 +41,6 @@ lista_monstros = [
     {'Nome': 'Inimigo da Luz', 'Tipo': 'Luz', 'Level': 1, 'Vida': 50, 'DanoMin': 15, 'DanoMax': 25, 'Defesa': 5, 'Exp': 25},
     {'Nome': 'Inimigo da Sombra', 'Tipo': 'Sombra', 'Level': 1, 'Vida': 50, 'DanoMin': 15, 'DanoMax': 25, 'Defesa': 5, 'Exp': 25},
     {'Nome': 'Inimigo do Vento', 'Tipo': 'Vento', 'Level': 1, 'Vida': 50, 'DanoMin': 15, 'DanoMax': 25, 'Defesa': 5, 'Exp': 25},
+    {'Nome': 'Inimigo Neutro', 'Tipo': 'Neutro', 'Level': 1, 'Vida': 50, 'DanoMin': 15, 'DanoMax': 25, 'Defesa': 5, 'Exp': 25},
 ]
 
